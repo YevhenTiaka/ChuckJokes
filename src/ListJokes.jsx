@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { fetchAllJokes } from './gateWay';
 
-const ListJokes = ({ inputValue }) => {
+const ListJokes = () => {
+  const [inputValue, setInputValue] = useState('');
   const [searchResult, setSearchResult] = useState('');
 
   const handleSearchClick = () => {
@@ -14,7 +15,9 @@ const ListJokes = ({ inputValue }) => {
         setSearchResult(randomSearchedJokes);
       });
   };
-
+  const handleInputChange = event => {
+    setInputValue(event.target.value);
+  };
   const isFoundJoke =
     searchResult === '' ? null : <span className="notFound">Dont Joke with Chuck</span>;
 
@@ -29,6 +32,13 @@ const ListJokes = ({ inputValue }) => {
 
   return (
     <>
+      <input
+        className="section-input"
+        type="text"
+        placeholder="Chuck String"
+        value={inputValue}
+        onChange={handleInputChange}
+      />
       <button className="section-search_btn" onClick={handleSearchClick}>
         Search Jokes
       </button>

@@ -1,11 +1,14 @@
 import React from 'react';
 import Header from './Header.jsx';
-import Section from './Section.jsx';
+
+import RandomJoke from './RandomJoke.jsx';
+import ListJokes from './ListJokes.jsx';
 
 const App = () => (
   <main className="main">
     <Header />
-    <Section />
+    <RandomJoke />
+    <ListJokes />
   </main>
 );
 

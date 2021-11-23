@@ -17,23 +17,21 @@ body {
   background-size: 100% 100%;
 }
 .section {
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 40px;
 
   &-random_joke {
+    font-weight: 700;
+    width: 700px;
     background-color: #ffffff10;
     backdrop-filter: blur(12px);
     border-radius: 20px;
-    padding: 0;
     margin: 0 auto;
     font-size: 15px;
     color: #000;
-    font-weight: 700;
-    width: 700px;
+
     list-style-type: none;
     margin-bottom: 100px;
 
@@ -41,41 +39,44 @@ body {
       padding: 10px;
     }
   }
-  &-btn {
-    border-radius: 8px;
-    cursor: pointer;
-    height: 30px;
-    border: none;
-    margin: 15px 0;
-    &:hover {
-      background-color: coral;
-      color: #fff;
-    }
+}
+.section-btn {
+  border-radius: 8px;
+  width: 170px;
+  height: 30px;
+  cursor: pointer;
+
+  border: none;
+  margin: 15px 0;
+  &:hover {
+    background-color: coral;
+    color: #fff;
   }
-  &-search_btn {
-    border-radius: 8px;
-    width: 170px;
-    height: 40px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    border: none;
-    cursor: pointer;
-    &:hover {
-      background-color: coral;
-      color: #fff;
-    }
-  }
-  &-select {
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  &-input {
-    height: 30px;
-    margin-top: 0px;
-    border-radius: 8px;
+}
+.section-search_btn {
+  border-radius: 8px;
+  width: 170px;
+  height: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: coral;
+    color: #fff;
   }
 }
 
+.section-input {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.section-select {
+  border-radius: 8px;
+  cursor: pointer;
+}
 .header-text {
   font-weight: 700;
   margin-top: 10px;

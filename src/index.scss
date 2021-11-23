@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  color: #fff;
+  font-size: 20px;
+  overflow-x: hidden;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-image: url('https://images01.military.com/sites/default/files/styles/full/public/2021-04/chucknorris.jpeg.jpg');
+  background-size: 100% 100%;
+}
+.section {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  &-btn {
+    border-radius: 8px;
+  }
+  &-search_btn {
+    border-radius: 8px;
+    border: none;
+  }
+  &-select {
+    border-radius: 8px;
+  }
+  &-input {
+    margin: 15px 0;
+    margin-top: 0px;
+    border-radius: 8px;
+  }
+}
+
+.header-text {
+  font-weight: 700;
+  margin-top: 30px;
+  text-align: center;
+}
+.header-joke {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-weight: 700;
+}
+.section-btn {
+  margin: 15px 0;
+}
+.section-random_joke {
+  background-color: #ffffff10;
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #000;
+  font-weight: 700;
+  width: 700px;
+  list-style-type: none;
+  margin-bottom: 100px;
+
+  &-item {
+    padding: 10px;
+  }
+}
+.notFound {
+  display: flex;
+  justify-content: center;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { fetchRandomJoke, fetchAllJokes } from './gateWay';
+import { fetchRandomJoke } from './gateWay';
+import ListJokes from './ListJokes.jsx';
 
 const Section = () => {
   const [category, setCategory] = useState('');
@@ -7,8 +8,6 @@ const Section = () => {
   const [randomJoke, setRandomJoke] = useState('');
 
   const [inputValue, setInputValue] = useState('');
-
-  const [searchResult, setSearchResult] = useState('');
 
   const handleChange = event => {
     setCategory(event.target.value);
@@ -23,26 +22,6 @@ const Section = () => {
     setInputValue(event.target.value);
   };
 
-  const handleSearchClick = () => {
-    fetchAllJokes()
-      .then(jokes =>
-        jokes.value.filter(el => el.joke.toLowerCase().includes(inputValue.toLowerCase())),
-      )
-      .then(res => {
-        const randomSearchedJokes = res.slice(0, 5);
-        setSearchResult(randomSearchedJokes);
-      });
-  };
-  const isFoundJoke = searchResult === '' ? null : <span className="notFound">No Jokes</span>;
-
-  const listJokes =
-    searchResult.length === 0
-      ? isFoundJoke
-      : searchResult.map(el => (
-          <li className="section-random_joke-item" key={el.id}>
-            {el.joke}
-          </li>
-        ));
   return (
     <>
       <span className="header-joke">{randomJoke}</span>
@@ -62,11 +41,8 @@ const Section = () => {
           value={inputValue}
           onChange={handleInputChange}
         />
-        <button className="section-search_btn" onClick={handleSearchClick}>
-          Search Jokes
-        </button>
       </section>
-      <ul className="section-random_joke">{listJokes}</ul>
+      <ListJokes inputValue={inputValue} />
     </>
   );
 };

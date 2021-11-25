@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fetchAllJokes } from './gateWay';
+import { fetchAllJokes, randomSearchFunc } from './gateWay';
 
 const ListJokes = () => {
   const [inputValue, setInputValue] = useState('');
@@ -11,8 +11,7 @@ const ListJokes = () => {
         jokes.value.filter(el => el.joke.toLowerCase().includes(inputValue.toLowerCase())),
       )
       .then(res => {
-        const randomSearchedJokes = res.slice(0, 5);
-        setSearchResult(randomSearchedJokes);
+        setSearchResult(randomSearchFunc(res));
       });
   };
   const handleInputChange = event => {

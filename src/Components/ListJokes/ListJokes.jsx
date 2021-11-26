@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { fetchAllJokes, randomSearchFunc } from './gateWay';
+import { fetchAllJokes, randomSearchFunc } from '../../Gateways/gateWay';
+import './listJokes.scss';
 
 const ListJokes = () => {
   const [inputValue, setInputValue] = useState('');
@@ -17,6 +18,7 @@ const ListJokes = () => {
   const handleInputChange = event => {
     setInputValue(event.target.value);
   };
+
   const isFoundJoke =
     searchResult === '' ? null : <span className="notFound">Dont Joke with Chuck</span>;
 

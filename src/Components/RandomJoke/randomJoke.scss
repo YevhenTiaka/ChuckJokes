@@ -1,0 +1,42 @@
+.section {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &-random_joke {
+    font-weight: 700;
+    width: 700px;
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: 15px;
+    color: #000;
+
+    list-style-type: none;
+    margin-bottom: 100px;
+
+    &-item {
+      padding: 10px;
+    }
+  }
+}
+
+.section-select {
+  border-radius: 8px;
+  cursor: pointer;
+}
+.section-btn {
+  border-radius: 8px;
+  width: 170px;
+  height: 30px;
+  cursor: pointer;
+
+  border: none;
+  margin: 15px 0;
+  &:hover {
+    background-color: coral;
+    color: #fff;
+  }
+}

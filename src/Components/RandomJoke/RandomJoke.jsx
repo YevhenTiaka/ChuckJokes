@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { fetchRandomJoke } from './gateWay';
+import { fetchRandomJoke } from '../../Gateways/gateWay';
+import './randomJoke.scss';
 
 const RandomJoke = () => {
   const [category, setCategory] = useState('');

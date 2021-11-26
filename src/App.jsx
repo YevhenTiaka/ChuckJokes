@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './Header.jsx';
+import Header from './Components/Header/Header.jsx';
 
-import RandomJoke from './RandomJoke.jsx';
-import ListJokes from './ListJokes.jsx';
+import RandomJoke from './Components/RandomJoke/RandomJoke.jsx';
+import ListJokes from './Components/ListJokes/ListJokes.jsx';
 
 const App = () => (
   <main className="main">

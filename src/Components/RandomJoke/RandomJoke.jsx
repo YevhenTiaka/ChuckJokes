@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fetchRandomJoke } from '../../Gateways/gateWay';
+import { fetchRandomJoke } from '../../API/gateWay';
 import './randomJoke.scss';
 
 const RandomJoke = () => {

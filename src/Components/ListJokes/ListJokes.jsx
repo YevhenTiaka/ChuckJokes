@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { fetchAllJokes, randomSearchFunc } from '../../Gateways/gateWay';
+import { fetchAllJokes } from '../../API/gateWay';
+import randomSearchFunc from '../../helpers/randomSearchFunc';
 import './listJokes.scss';
 
 const ListJokes = () => {

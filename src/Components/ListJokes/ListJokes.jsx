@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fetchAllJokes } from '../../API/gateWay';
+import { fetchAllJokes } from '../../API/fetch';
 import randomSearchFunc from '../../helpers/randomSearchFunc';
 import './listJokes.scss';
 
